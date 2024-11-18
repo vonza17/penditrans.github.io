@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --primaryTextColor: #232e35; /* Untuk title atau judul */
+  --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
+
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9; /* untuk line di pre-title */
+
+  --primaryBackgroundColor: #fff;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
+
+  --primaryIconColor: #7e74f1;
+  --primaryIconColorHover: #5d51e8;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  margin-bottom: 2rem;
+  width: 100%;
+  background: #ffff;
+  position: fixed;
+  z-index: 9999;
+  height: 5rem;
+}
+
+.img--bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: -3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /*30.4 px */
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* End Preparation */
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* Layouts */
+.grid-3 {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* --- Logo and Navigation Menu --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  align-items: center;
+  margin-top: -13px;
+}
+
+/* Navigation Menu */
+nav ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+nav ul li a {
+  color: var(--primaryTextColor);
+}
+
+/* Burger */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 25px;
+  right: 35px;
+}
+
+/* Services Section */
+#services {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+  }
+  
+  .services-title {
+    text-align: center;
+  }
+  
+  .service {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+  }
+  
+  .service-icon {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+  }  
+
+/* Footer Section */
+
+footer {
+    background: linear-gradient(135deg, #47c3af, #2573b8);
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #f1f1f1;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .section h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+  }
+  
+  .section ul {
+    list-style: none;
+  }
+  
+  .section ul li {
+    margin: 5px 0;
+    color: #f1f1f1;
+  }
+  
+  .section a {
+    color: #f1f1f1;
+  }
+  
+  .section.kantor-pusat p {
+    margin: 5px 0;
+  }
+  
+  .footer-bottom {
+    font-size: 0.9em;
+    line-height: 1.6;
+    text-align: left;
+    margin: 4rem 3rem 4rem;
+  }
+  
+  .footer-bottom p {
+    margin-top: 30px;
+  }
+  
+  .footer-end {
+    text-align: center;
+  }
+  
